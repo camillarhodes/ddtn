@@ -6,7 +6,6 @@ Created on Mon May  7 09:34:54 2018
 """
 
 # Import directories
-from . import cuda
 from . import data
 from . import helper
 from . import sampling
@@ -22,8 +21,9 @@ print(70*'-')
 print('Operating system:', _platform)
 
 if (_platform == "linux" or _platform == "linux2" \
-    or _platform == "darwin") and gpu_support(): 
-   print('Using the fast cuda implementation for CPAB')
+    or _platform == "darwin") and gpu_support():
+    print('Using the fast cuda implementation for CPAB')
+    from . import cuda
 else:
    # Windows 32 or 64-bit or no GPU
    print('Using the slow pure tensorflow implementation for CPAB')
