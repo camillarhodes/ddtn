@@ -1,5 +1,5 @@
-CPPFLAG = $(shell python3 -c 'import tensorflow as tf; print(tf.sysconfig.get_include())')
-LDFLAGS = $(shell python3 -c 'import tensorflow as tf; print(tf.sysconfig.get_lib())')
+CPPFLAG = $(shell python -c 'import tensorflow as tf; print(tf.sysconfig.get_include())')
+LDFLAGS = $(shell python -c 'import tensorflow as tf; print(tf.sysconfig.get_lib())')
 CUDALIB = /usr/local/cuda-9.0/lib64/
 CUDALIB2 = /home/dovd/cuda/lib64/
 
