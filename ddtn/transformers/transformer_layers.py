@@ -174,7 +174,7 @@ def ST_Homografy_transformer(U, theta, out_size):
 #%%
 def ST_TPS_transformer(U, theta, out_size, tps_size = [4,4]):
     #GUY
-    tps_size = [8,8]
+    tps_size = [16,16]
     """ Spatial transformer using thin plate spline transformations
 
     Arguments:

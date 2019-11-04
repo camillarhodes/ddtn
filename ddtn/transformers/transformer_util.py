@@ -73,7 +73,7 @@ def get_transformer_dim(transformer_name='affine'):
               'affinediffeo': 6,
               'homografy': 9,
               'CPAB': load_basis()['d'],
-              'TPS': 128
+              'TPS': 16*16*2
              }
     assert (transformer_name in lookup), 'Transformer not found, choose between: ' \
             + ', '.join([k for k in lookup.keys()])
@@ -93,7 +93,7 @@ def get_transformer_init_weights(n_units, transformer_name='affine'):
             'affinediffeo': np.zeros((dim,), dtype=np.float32),
             'homografy': np.array([1,0,0,0,1,0,0,0,1], dtype=np.float32),
             'CPAB': np.zeros((dim,), dtype=np.float32),
-            'TPS': create_grid([-1,-1],[1,1],[8,8]).T.flatten()}
+            'TPS': create_grid([-1,-1],[1,1],[16,16]).T.flatten()}
 
     return (kernel[transformer_name], bias[transformer_name])
 
