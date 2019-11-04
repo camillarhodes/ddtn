@@ -77,7 +77,7 @@ def tf_Homografy_transformer(points, theta):
         return T_g
 
 #%%
-def tf_TPS_transformer(points, theta, tps_size=[16,16]):
+def tf_TPS_transformer(points, theta, tps_size=[8,8]):
     """
     Arguments:
         points: `Matrix` [2, np] of grid points to transform
